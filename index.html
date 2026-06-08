@@ -12,24 +12,11 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
 </head>
 
 <body>
     <!-- SVGs -->
-
-    <!-- logo icon -->
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <path
-            d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z" />
-    </svg>
-
-    <!-- spyglass icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-    </svg>
 
     <!-- hamburger icon -->
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -96,86 +83,134 @@
 
     <!-- Header -->
     <header class="header">
-        Evently
+      <nav class="nav">
+        <a href="/" class="nav-logo">
+          <!-- logo icon -->
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+            <path d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z" />
+          </svg>
+          Evently
+        </a>
+        
+        <ul class="nav-links">
+          <li><a href="/hem">Hem</a></li>
+          <li><a href="/evenemang">Evenemang</a></li>
+          <li><a href="/kategorier">Kategorier</a></li>
+          <li><a href="/om-oss">Om oss</a></li>
+          <li><a href="/kontakt">Kontakt</a></li>
+        </ul>
 
-        Hem
-        Evenemang
-        Kategorier
-        Om oss
-        Kontakt
-
-        Skapa konto
+        <div class="nav-actions">
+          <a aria-label="Search events" href="#" class="btn-search">
+            <!-- spyglass icon -->
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </a>
+          <button class="btn-primary">
+            Skapa konto
+          </button> 
+        </div>
+        
+      </nav>  
     </header>
 
 
     <!-- Main content -->
-    <main>
-        Upptäck. Upplev. Minns.
+    <main class="main-content">
+      <section class="hero">
+         <p class="text-badge">Upptäck. Upplev. Minns.</p>
+         <h1 class="hero-title">Hitta lokala evenemang du kommer älska</h1>
+         <a href="/evenemang" class="btn-primary">Utforska evenemang</a>
+         <a href="/helgens-tips" class="btn-secondary">Se helgens tips</a>
+          <div class="search-grid grid-content">
+            <p>1</p> 
+            <p>2</p>
+            <p>3</p>
+          </div>
+      </section>
+      <section class="search-section">
+        <h2>Hitta rätt evenemang</h2>
+        <input type="text" placeholder="Sökord">
+        <select>
+          <option value="">Alla kategorier</option>
+          <option value="konsert">Konsert</option>
+          <option value="marknad">Marknad</option>
+          <option value="workshop">Workshop</option>
+          <option value="familj">Familj</option>
+          <option value="sport">Sport / Hälsa</option>
+        </select>
+        <date>
+          <label for="start-date">Datum</label>
+          <input type="date" id="start-date" name="start-date">
+        </date>
+        <button class="btn-primary">Sök evenemang</button>
+      </section>
+      <section class="popular-events">
+        <div class="section-header">
+         <h2>Populära evenemang</h2>
+         <a href="/evenemang" class="btn-secondary">Se alla evenemang</a>
+        </div>
+        <div class="events-grid">
+          <div class="event-card">
+            <h3>Indie Night med Nova Sun</h3>
+            <p class="event-category">Konsert</p>
+            <p>24 maj</p>
+            <p>Pustervik, Göteborg</p>
+          </div>
+            <div class="event-card">
+              <h3>Vårmarknad i Slottsskogen</h3>
+              <p class="event-category">Marknad</p>
+              <p>25 maj</p>
+              <p>Slottsskogen, Göteborg</p>
+            </div>
+          <div class="event-card">
+            <h3>Keramikkurs för nybörjare</h3>
+            <p class="event-category">Workshop</p>
+            <p>27 maj</p>
+            <p>Studio Lera, Göteborg</p>
+          </div>
 
-        Hitta lokala evenemang du kommer älska
+          <div class="event-card">
+            <h3>Barnteater: Den lilla sjöjungfrun</h3>
+            <p class="event-category">Familj</p>
+            <p>31 maj</p>
+            <p>Folkteatern, Göteborg</p>
+          </div>
 
-        Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.
+          <div class="event-card">
+            <h3>Morgonlöpning & frukost</h3>
+            <p class="event-category">Sport</p>
+            <p>1 juni</p>
+            <p>Slottsskogen, Göteborg</p>
+          </div>
 
-        Utforska evenemang
-        Se helgens tips
-
-        Hitta rätt evenemang
-
-        Sökord
-        Kategori
-        Alla kategorier
-        Konsert
-        Marknad
-        Workshop
-        Familj
-        Sport / Hälsa
-        Datum
-        Sök evenemang
-
-        Populära evenemang
-        Se alla evenemang
-
-        Indie Night med Nova Sun
-        Konsert
-        24 maj
-        Pustervik, Göteborg
-
-        Vårmarknad i Slottsskogen
-        Marknad
-        25 maj
-        Slottsskogen, Göteborg
-
-        Keramikkurs för nybörjare
-        Workshop
-        27 maj
-        Studio Lera, Göteborg
-
-        Barnteater: Den lilla sjöjungfrun
-        Familj
-        31 maj
-        Folkteatern, Göteborg
-
-        Morgonlöpning & frukost
-        Sport
-        1 juni
-        Slottsskogen, Göteborg
-
-
-        Jazzkväll på Vasateatern
-        Konsert
-        3 juni
-        Vasateatern, Göteborg
-
-
-        Gratis & prisvärt
-        Hitta massor av evenemang som är gratis eller snälla mot plånboken.
-
-
-        För alla åldrar
-        Aktiviteter för både stora och små - hitta något som passar hela familjen.
-
-        Nära dig
-        Upptäck evenemang i ditt område och stöd lokala arrangörer.
+          <div class="event-card">
+            <h3>Jazzkväll på Vasateatern</h3>
+            <p class="event-category">Konsert</p>
+            <p>3 juni</p>
+            <p>Vasateatern, Göteborg</p>
+          </div>
+        </div>
+      </section>
+      <section class="bottom-features">
+         <div class="feature-card">
+            <h3> Gratis & prisvärt</h3>
+            <p>Hitta massor av evenemang som är gratis eller snälla mot plånboken.</p>
+         </div>
+          <div class="feature-card">
+              <h3>För alla åldrar</h3>
+              <p>Aktiviteter för både stora och små - hitta något som passar hela familjen.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <h3> Nära dig</h3>
+          <p>Upptäck evenemang i ditt område och stöd lokala arrangörer.</p>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
@@ -183,13 +218,15 @@
         Evently
         Evently samlar lokala evenemang så att du enkelt kan upptäcka, planera och dela upplevelser som berikar din
         vardag.
+      <section class="footer-section">
+        <h3>Utforska</h3>
+        <ul class="footer-links">
+          <li>Alla evenemang</li>
+          <li>Kategorier</li>
+          <li>Helgens tips</li>
+          <li>Populära</li>
+        </ul>
 
-
-        Utforska
-        Alla evenemang
-        Kategorier
-        Helgens tips
-        Populära
 
         Om Evently
         Om oss
