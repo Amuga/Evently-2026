@@ -62,9 +62,15 @@ a {
   color: inherit;
 }
 
-button {
+button, .btn {
   border: none;
   cursor: pointer;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  white-space: nowrap;
+  border-radius: var(--spacing);
+  font-weight: 500;
+
 }
 
 ul {
@@ -76,15 +82,22 @@ html {
   color-scheme: dark light;
 }
 
+input, select {
+  padding: 0.5rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--spacing);
+  font-size: 1rem;
+}
+
 /*** Global/base styles ***/
 
 body {
-  max-width: 70vw;
-  margin: 0 auto;
   min-height: 100vh;
   font-family: var(--font-inter);
   color: var(--gray-900);
+  margin: 0;
 }
+
 
 h1,h2,h3,h4,h5,h6 {
   font-family: var(--font-poppins);
@@ -96,7 +109,10 @@ p {
   text-wrap: pretty;
 }
 
-
+footer {
+  background-color: var(--gray-900);
+  color: var(--gray-50);
+}
 
 /* Custom premium scrollbar */
 ::-webkit-scrollbar {
