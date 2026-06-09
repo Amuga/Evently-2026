@@ -66,7 +66,7 @@ button, .btn {
   border: none;
   cursor: pointer;
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   white-space: nowrap;
   border-radius: var(--spacing);
   font-weight: 500;
@@ -79,7 +79,7 @@ ul {
 
 
 html {
-  color-scheme: dark light;
+  color-scheme: light;
 }
 
 input, select {
